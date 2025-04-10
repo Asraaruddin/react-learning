@@ -1,3 +1,4 @@
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -28,3 +29,14 @@ This includes:
 
 Stay tuned for more as I learn React daily!
 
+=======
+# Day 1: JSX Basics & First Component
+
+## ✅ What I Learned
+- What JSX is and why we use it in React
+- How to create a functional component
+- Used `root.render(<App />)` to render the component
+
+## 💡 Mini Project
+Created a `MainContent` component that displays "React is great!" with JSX.
+>>>>>>> ccfbe7d (Completed Netflix UI layout for Day-1)
