@@ -39,4 +39,4 @@ Stay tuned for more as I learn React daily!
 
 ## 💡 Mini Project
 Created a `MainContent` component that displays "React is great!" with JSX.
->>>>>>> ccfbe7d (Completed Netflix UI layout for Day-1)
+
