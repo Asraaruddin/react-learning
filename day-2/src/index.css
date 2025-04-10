@@ -1,0 +1,27 @@
+.student{
+  font-family: Arial,sans-serif;
+  font-size:2em ;
+  padding: 10px;
+  border: 2px solid black;
+}
+.student p {
+  margin:0
+}
+
+
+.user-card {
+  border: 2px solid #ddd;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  max-width: 300px;
+  background-color: #f9f9f9;
+}
+.productcard{
+  border: 2px solid #cd5050;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  max-width: 300px;
+  background-color: #f9f9f9;
+}
