@@ -1,0 +1,10 @@
+{
+    "name": "react-learning",
+    "private": true,
+    "workspaces": [
+      "day-1",
+      "day-2",
+      "day-3"
+    ]
+  }
+  
