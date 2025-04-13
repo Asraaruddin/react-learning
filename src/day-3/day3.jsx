@@ -5,13 +5,27 @@ import React, { useEffect, useState } from 'react'
 
 
 function UserGreeting(props) {
+
+
+  const cities = [ 'Select city','hyd','chennai','delhi','banglore','mumbai']
     const [username, setUsername] = useState('');
     const [city, setCity] = useState('');
 const [isSubmited,setIsSubmitted] = useState(false);
 
 const handleSubmit= () =>{
+  if(!username.trim()) {
+    alert("Please enter your name.");
+    return;
+  }
+  if(city==="Select city"){
+    alert("Please select a valid city.")
+    return;
+  }
+      
   setIsSubmitted(true);
-} 
+}
+
+
 
   return (   
     
@@ -28,10 +42,7 @@ const handleSubmit= () =>{
             value={city} 
             onChange={(e)=>setCity(e.target.value)}
             >
-                <option value="-1">Select your city</option>
-                <option value="chennai">chennai</option>
-                <option value="hyd">hyd</option>
-                <option value="delhi">delhi</option>
+               {cities.map(city=><option value={city}>{city} </option>)}
             </select>
             <br />
             <button className='btn btn-primary ' onClick={handleSubmit}>
