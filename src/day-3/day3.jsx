@@ -7,7 +7,19 @@ import React, { useEffect, useState } from 'react'
 function UserGreeting(props) {
 
 
-  const cities = [ 'Select city','hyd','chennai','delhi','banglore','mumbai']
+  const cities = [ 'Select city','hyd','chennai','delhi','banglore','mumbai'];
+  const [items] = useState(
+    [
+      {Category:'Electronics',Products:['TV',"Mobile"]},
+      {Category:'Footwear',Products:['Casuals','Boots','Sneaker']}
+    ]
+  )
+  const [mfd] = useState(new Date());
+  const product = {
+    name:"iphone16",
+    price:"89,000",
+    rating:4.3,
+  }
     const [username, setUsername] = useState('');
     const [city, setCity] = useState('');
 const [isSubmited,setIsSubmitted] = useState(false);
@@ -42,7 +54,10 @@ const handleSubmit= () =>{
             value={city} 
             onChange={(e)=>setCity(e.target.value)}
             >
-               {cities.map(city=><option value={city}>{city} </option>)}
+               {cities.map((city,index )=>
+                (<option key={index} value={city}>
+                  {city} 
+                  </option> ))}
             </select>
             <br />
             <button className='btn btn-primary ' onClick={handleSubmit}>
@@ -51,6 +66,28 @@ const handleSubmit= () =>{
             {isSubmited &&(
               <p className='mt-4'>Hello! {username} from {city}</p>
             )}
+
+            <ul>
+              {
+                Object.keys(product).map(key=><li key={key}>{key} : {product[key]}</li>)
+              }
+            </ul>
+
+            <ol>
+              {
+                items.map(item=>
+                  <li key={item.Category}>
+                    {item.Category}
+                  <ul>
+                    {
+                      item.Products.map(product=><li key={product}>{product}</li>)
+                    }
+                  </ul>
+                  </li>
+                )
+              }
+            </ol>
+            <h2>{mfd.toDateString()}</h2>
             
     </div>
  
