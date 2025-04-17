@@ -4,12 +4,14 @@ import UserGreeting from './day3.jsx'
 import LiveClock from './clock.jsx'
 import UserForm from './userform.jsx'
 import FeedbackForm from './feedback.jsx'
+import MouseEvents from './mouseevents.jsx'
 function App() {
     return (
       <div>
    
-   <FeedbackForm/>
-        
+
+
+        <MouseEvents/>
     
       </div>
     )
