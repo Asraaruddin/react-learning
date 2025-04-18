@@ -19,7 +19,7 @@ export function ClassBinding(){
 
     return(
         <div className="container-fluid d-flex justify-content-center align-items-center" style={{height:'100vh'}}>
-            <form className={`border border-2 p-4 rounded ${theme}`}>
+            <form className={`border border-2 p-4 rounded ${theme}`}> 
                 <div className="form-switch">
                     <input type="checkbox" onChange={handleThemeChange} className="form-check-input" /> <label className="form-check-lable">Dark Mode</label>
                 </div>
