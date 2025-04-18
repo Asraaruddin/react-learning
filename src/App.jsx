@@ -1,17 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Day3 from '../src/day-3'
+import React from 'react';
+import Navbar from './Components/Navbar'; // adjust path as needed
+import { ClassBinding } from './Components/class-bindinf';
 
-
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      
-    </>
-  )
-}
+    <div>
+      <Navbar/>
+      <ClassBinding/>
+    </div>
+  );
+};
 
-export default App
+export default App;
