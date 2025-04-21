@@ -6,6 +6,8 @@ import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
 import  'bootstrap' ;
 import './index.css';
 import App from './App.jsx';
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 
 

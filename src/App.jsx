@@ -1,5 +1,4 @@
 import React from 'react';
-// import Navbar from './Components/Navbar'; // adjust path as needed
 import Header from './Components/Header';
 import HeroSection from './Components/HeroSection';
 import Skills from './Components/Skills';

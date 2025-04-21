@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asrar | Portfolio</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Sticky Navigation -->
+    <nav id="desktop-nav">
+        <div class="logo">ASRAR</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Responsive Hamburger Navigation -->
+    <nav id="hamburger-nav">
+        <div class="logo">ASRAR</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="menu-links">
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span>Asrar Uddin</span></h1>
+                <p>Front-End Developer | UI Crafter | Web Enthusiast</p>
+                <div class="btn-group">
+                    <button onclick="window.open('resume.pdf')">Download CV</button>
+                    <button onclick="location.href='#contact'">Contact Me</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="profile.png" alt="Asrar's Profile">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I specialize in modern front-end development using React.js, Tailwind CSS, and JavaScript to build visually stunning and accessible web applications.</p>
+            </div>
+            <div class="about-skills">
+                <div class="skill-card">
+                    <img src="experience.png" alt="Experience">
+                    <h3>Experience</h3>
+                    <p>2+ Years in Front-End Development</p>
+                </div>
+                <div class="skill-card">
+                    <img src="education.png" alt="Education">
+                    <h3>Education</h3>
+                    <p>B.Tech in Electrical Engineering</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="project1.png" alt="Project 1">
+                <h3>Portfolio Website</h3>
+                <p>A responsive, dark-themed portfolio built with React.js and Tailwind.</p>
+                <div class="btn-group">
+                    <button onclick="location.href='https://github.com/'">GitHub</button>
+                    <button onclick="location.href='#'">Live Demo</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="project2.png" alt="Project 2">
+                <h3>E-Commerce Dashboard</h3>
+                <p>Admin panel using React.js, Redux & Bootstrap.</p>
+                <div class="btn-group">
+                    <button onclick="location.href='https://github.com/'">GitHub</button>
+                    <button onclick="location.href='#'">Live Demo</button>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="project3.png" alt="Project 3">
+                <h3>Weather App</h3>
+                <p>Simple React.js app that fetches real-time weather data.</p>
+                <div class="btn-group">
+                    <button onclick="location.href='https://github.com/'">GitHub</button>
+                    <button onclick="location.href='#'">Live Demo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/f/example" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
