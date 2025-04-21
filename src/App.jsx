@@ -6,21 +6,14 @@ import Projects from './Components/Projects';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
+import TodoContainer from './Components/TodoContainer';
 
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
   return (
-    <div className="bg-[#1a1a2e] text-white font-sans scroll-smooth">
- 
-    <Header />
-    <HeroSection />
-    <Skills /> 
-    <Projects /> 
-    <About />
-    <Contact />
-    <Footer />
-
+    <div className="min-h-screen bg-gray-950 flex items-center justify-center">
+    <TodoContainer />
   </div>
   );
 };
