@@ -51,6 +51,7 @@ export function FakestoreProducts()
         setStatus('Slide Show - Paused');
     }
 
+    
     function handleSeekbarChange(e){
         count.current = e.target.value;
         LoadProduct(count.current);
