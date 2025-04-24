@@ -10,13 +10,14 @@ import TodoContainer from './Components/TodoContainer';
 import { Debounce } from './Components/debounce';
 import { Debouncedemo } from './Components/debouncedemo';
 import { FakestoreProducts } from './Components/fakestorapi';
+import { Focusinput } from './Components/inputfocus';
 
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
   return (
-    <div className="min-h-screen  flex items-center justify-center">
-    <FakestoreProducts/>
+    <div>
+  <Focusinput/>
     
   </div>
   );
