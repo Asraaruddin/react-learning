@@ -12,13 +12,14 @@ import { Debouncedemo } from './Components/debouncedemo';
 import { FakestoreProducts } from './Components/fakestorapi';
 import { Focusinput } from './Components/inputfocus';
 import { TimerComponent } from './Components/timer';
-
+import { PreviousValue } from './Components/previouscount';
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
   return (
     <div>
  <TimerComponent/>
+ <PreviousValue/>
     
   </div>
   );
