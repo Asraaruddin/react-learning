@@ -34,7 +34,9 @@ const toggleTodo = (id) => {
     return(
         <div className="max-w-md mx-auto mt-10 p-4 bg-gray-900 rounded shadow">
             <h2 className="text-2xl font-bold text-white mb-4">My To-Do List</h2>
-            <TodoInput onAddTodo={addTodo} />
+            <TodoInput onAdd={addTodo} />
+
+           
             <TodoList todos={todos} onDelete={deleteTodo} />
 
         </div>

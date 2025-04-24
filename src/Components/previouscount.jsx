@@ -12,7 +12,7 @@ export function PreviousValue(){
         <div>
             <h3>Current : {count}</h3>
             <h4>Previous:{prevCountRef.current}</h4>
-            <button onClick={()=>setCount(count + 1)}>Increment</button>
+            <button className="btn btn-primary" onClick={()=>setCount(count + 1)}>Increment</button>
         </div>
     )
 } 

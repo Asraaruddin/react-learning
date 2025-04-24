@@ -13,13 +13,13 @@ import { FakestoreProducts } from './Components/fakestorapi';
 import { Focusinput } from './Components/inputfocus';
 import { TimerComponent } from './Components/timer';
 import { PreviousValue } from './Components/previouscount';
+import RenderCounter from './Components/example';
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
   return (
     <div>
- <TimerComponent/>
- <PreviousValue/>
+<RenderCounter/>
     
   </div>
   );
