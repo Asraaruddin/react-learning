@@ -14,13 +14,14 @@ import { Focusinput } from './Components/inputfocus';
 import { TimerComponent } from './Components/timer';
 import { PreviousValue } from './Components/previouscount';
 import RenderCounter from './Components/example';
+import { Stopwatch } from './Components/stopwatch';
+import { Start } from './Components/startstop';
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
   return (
     <div>
-<RenderCounter/>
-    
+  <Start/>
   </div>
   );
 };
