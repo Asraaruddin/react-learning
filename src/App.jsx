@@ -18,12 +18,13 @@ import { Stopwatch } from './Components/stopwatch';
 import { Start } from './Components/startstop';
 import { ExpensiveComponent } from './Components/usememo';
 import { FilteredList } from './Components/filterdata';
+import { Component } from './Components/component';
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
   return (
     <div>
-<FilteredList/>
+<Component/>
   </div>
   );
 };
