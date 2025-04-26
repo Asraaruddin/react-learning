@@ -19,12 +19,14 @@ import { Start } from './Components/startstop';
 import { ExpensiveComponent } from './Components/usememo';
 import { FilteredList } from './Components/filterdata';
 import { Component } from './Components/component';
+import { CounterComponent } from './Components/countercomponnet';
+import { ToggleComponent } from './Components/togglecomponent';
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
   return (
     <div>
-<Component/>
+<ToggleComponent/>
   </div>
   );
 };
