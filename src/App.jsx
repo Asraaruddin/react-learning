@@ -21,12 +21,14 @@ import { FilteredList } from './Components/filterdata';
 import { Component } from './Components/component';
 import { CounterComponent } from './Components/countercomponnet';
 import { ToggleComponent } from './Components/togglecomponent';
+import { ToggleButton } from './Components/togglebutton';
+import { DarkModeToggle } from './Components/darkmode';
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
   return (
     <div>
-<ToggleComponent/>
+<DarkModeToggle/>
   </div>
   );
 };
