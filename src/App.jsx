@@ -23,12 +23,13 @@ import { CounterComponent } from './Components/countercomponnet';
 import { ToggleComponent } from './Components/togglecomponent';
 import { ToggleButton } from './Components/togglebutton';
 import { DarkModeToggle } from './Components/darkmode';
+import { AutoCounterApp } from './Components/autocounterapp';
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
   return (
     <div>
-<DarkModeToggle/>
+< AutoCounterApp/>
   </div>
   );
 };
