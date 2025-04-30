@@ -25,12 +25,13 @@ import { ToggleButton } from './Components/togglebutton';
 import { DarkModeToggle } from './Components/darkmode';
 import { AutoCounterApp } from './Components/autocounterapp';
 import { LoginForm } from './Components/loginform';
+import { LocalStorageDemo } from './Components/localstorage';
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
   return (
     <div>
-< LoginForm/>
+< LocalStorageDemo/>
   </div>
   );
 };
