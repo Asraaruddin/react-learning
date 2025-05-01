@@ -33,6 +33,7 @@ const App = () => {
     <div>
 < LocalStorageDemo/>
   </div>
+  
   );
 };
 
