@@ -32,7 +32,14 @@ import UserList from './Components/userlist';
 const App = () => {
   return (
     <div>
-<  UserList/>
+<  Header/>
+< HeroSection/>
+<Skills/>
+<  Projects/>
+<  About/>
+< Contact/>
+< Footer/>
+
   </div>
   
   );
