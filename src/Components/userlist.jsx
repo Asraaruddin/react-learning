@@ -1,7 +1,7 @@
 import React from 'react';
 import useFetch from './usefectch';
-
-function UserList() {
+ 
+ export function UserList() {
   const { data, loading, error } = useFetch('https://jsonplaceholder.typicode.com/users');
 
   if (loading) return <p>Loading...</p>;
@@ -9,11 +9,11 @@ function UserList() {
 
   return (
     <ul>
-      {data.map(user => (
-        <li key={user.id}>{user.name} - {user.email}</li>
-      ))}
-    </ul>
+    {data && Array.isArray(data) ? (
+      data.map((user) => <li key={user.id}>{user.name}</li>)
+    ) : (
+      <p>No data available</p>
+    )}
+  </ul>
   );
 }
-
-export default UserList;

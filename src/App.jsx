@@ -26,13 +26,14 @@ import { DarkModeToggle } from './Components/darkmode';
 import { AutoCounterApp } from './Components/autocounterapp';
 import { LoginForm } from './Components/loginform';
 import { LocalStorageDemo } from './Components/localstorage';
-import UserList from './Components/userlist';
+import { UserList } from './Components/userlist';
+import { Fakestore } from './Components/fakestore';
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
   return (
     <div>
-<userList/>
+<Fakestore/>
 
   </div>
   

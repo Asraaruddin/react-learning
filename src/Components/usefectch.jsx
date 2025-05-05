@@ -1,38 +1,49 @@
 import { useState, useEffect } from 'react';
 
-function useFetch(url) {
+const useFetch = (url, options = {}, retries = 0) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    let isMounted = true;
+    if (!url) return;
 
-    const fetchData = async () => {
+    const controller = new AbortController();
+    const fetchData = async (attempt = 0) => {
       setLoading(true);
+      setError(null);
+
       try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error('Failed to fetch');
-        const result = await response.json();
-        if (isMounted) {
-          setData(result);
-          setError(null);
-        }
+        const res = await fetch(url, {
+          signal: controller.signal,
+          ...options,
+          headers: {
+            'Content-Type': 'application/json',
+            ...(options.headers || {}),
+          },
+          body: options.body ? JSON.stringify(options.body) : null,
+        });
+
+        if (!res.ok) throw new Error(`Error: ${res.status}`);
+        const result = await res.json();
+        setData(result);
       } catch (err) {
-        if (isMounted) setError(err.message);
+        if (attempt < retries) {
+          fetchData(attempt + 1); // Retry
+        } else if (err.name !== 'AbortError') {
+          setError(err.message);
+        }
       } finally {
-        if (isMounted) setLoading(false);
+        setLoading(false);
       }
     };
 
     fetchData();
 
-    return () => {
-      isMounted = false; // cleanup on unmount
-    };
-  }, [url]);
+    return () => controller.abort();
+  }, [url, JSON.stringify(options)]); // dependency on options to refetch if changed
 
   return { data, loading, error };
-}
+};
 
 export default useFetch;
