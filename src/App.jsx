@@ -28,12 +28,17 @@ import { LoginForm } from './Components/loginform';
 import { LocalStorageDemo } from './Components/localstorage';
 import { UserList } from './Components/userlist';
 import { Fakestore } from './Components/fakestore';
+import { ProductList } from './Components/productlist';
+import { Parent } from './Components/rerender';
+import { useEffect } from 'react';
+import { Useeffect } from './Components/useEffect';
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
   return (
     <div>
-<Fakestore/>
+      
+<Useeffect/>
 
   </div>
   
