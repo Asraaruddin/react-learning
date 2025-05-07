@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+ export const ThemeContext = React.createContext();
 import Header from './Components/Header';
 import HeroSection from './Components/HeroSection';
 import Skills from './Components/Skills';
@@ -32,18 +33,16 @@ import { ProductList } from './Components/productlist';
 import { Parent } from './Components/rerender';
 import { useEffect } from 'react';
 import { Useeffect } from './Components/useEffect';
+import { Toolbar } from './Components/Toolbar';
+import { CounterReducer } from './Components/reducer';
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
-  const ThemeContext = React.createContext();
+
   const [theme,setTheme] =useState('light');
   return (
    
-    <ThemeContext.Provider value={{theme,setTheme}}>
-
-             <Toolbar/>
-
-    </ThemeContext.Provider>
+  <CounterReducer/>
   
   );
 };
