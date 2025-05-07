@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Components/Header';
 import HeroSection from './Components/HeroSection';
 import Skills from './Components/Skills';
@@ -35,12 +35,15 @@ import { Useeffect } from './Components/useEffect';
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
+  const ThemeContext = React.createContext();
+  const [theme,setTheme] =useState('light');
   return (
-    <div>
-      
-<Useeffect/>
+   
+    <ThemeContext.Provider value={{theme,setTheme}}>
 
-  </div>
+             <Toolbar/>
+
+    </ThemeContext.Provider>
   
   );
 };
