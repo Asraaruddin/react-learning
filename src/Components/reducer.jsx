@@ -13,9 +13,9 @@ const reducer = (state,action) =>{
     
     return(
         <>
-        <button onClick={()=> dispatch({type:'decrement'})}>-</button>
+        <button className="btn btn-primary" onClick={()=> dispatch({type:'decrement'})}>-</button>
         {state.count}
-        <button onClick={()=> dispatch({type:'increment'})}>+</button>
+        <button className="btn btn-secondary" onClick={()=> dispatch({type:'increment'})}>+</button>
         
         </>
     )

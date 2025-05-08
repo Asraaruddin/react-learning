@@ -35,6 +35,8 @@ import { useEffect } from 'react';
 import { Useeffect } from './Components/useEffect';
 import { Toolbar } from './Components/Toolbar';
 import { CounterReducer } from './Components/reducer';
+import { FilterList } from './Components/transition';
+import { NameInput } from './Components/useId';
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
@@ -42,7 +44,7 @@ const App = () => {
   const [theme,setTheme] =useState('light');
   return (
    
-  <CounterReducer/>
+  <NameInput />
   
   );
 };
