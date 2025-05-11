@@ -53,11 +53,11 @@ const App = () => {
   return (
    
     <GlobalProvider>
-    <div className="App">
+
      
     <ExpenseTracker/>
      
-    </div>
+
   </GlobalProvider>
   
   );

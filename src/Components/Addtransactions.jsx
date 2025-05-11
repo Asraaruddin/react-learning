@@ -6,20 +6,18 @@ export function AddTransaction() {
   const [amount, setAmount] = useState("");
 
   const { addTransaction } = useContext(GlobalContext);
-
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
-
+  
     const newTransaction = {
       id: Date.now(),
       text,
-      amount: +amount, // convert to number
+      amount: +amount  // <-- convert to number
     };
-
+  
     addTransaction(newTransaction);
-    setText("");
-    setAmount("");
   };
+  
 
   return (
     <div className="w-64 bg-white p-4 rounded-lg shadow-md mx-auto">
