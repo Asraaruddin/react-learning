@@ -37,14 +37,28 @@ import { Toolbar } from './Components/Toolbar';
 import { CounterReducer } from './Components/reducer';
 import { FilterList } from './Components/transition';
 import { NameInput } from './Components/useId';
+import { Head } from './Components/head';
+import { Balance } from './Components/balance';
+import { GlobalProvider } from './context/GlobalState';
+import { History } from './Components/history';
+import { AddTransaction } from './Components/Addtransactions';
+import { TransactionHistory } from './Components/TransactionHistory';
+import { IncomeExpensive } from './Components/Incomeexpensive';
+import { ExpenseTracker } from './Components/expensivetracker';
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
 
-  const [theme,setTheme] =useState('light');
+  
   return (
    
-  <NameInput />
+    <GlobalProvider>
+    <div className="App">
+     
+    <ExpenseTracker/>
+     
+    </div>
+  </GlobalProvider>
   
   );
 };
