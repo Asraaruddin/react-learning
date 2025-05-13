@@ -29,7 +29,7 @@ import { LoginForm } from './Components/loginform';
 import { LocalStorageDemo } from './Components/localstorage';
 import { UserList } from './Components/userlist';
 import { Fakestore } from './Components/fakestore';
-import { ProductList } from './Components/productlist';
+// import { ProductList } from './Components/productlist';
 import { Parent } from './Components/rerender';
 import { useEffect } from 'react';
 import { Useeffect } from './Components/useEffect';
@@ -52,6 +52,8 @@ import User from './pages/User';
 import { Contact } from './pages/contact';
 import Navbar from './Components/Navbar';
 import { Services } from './pages/services';
+import ProductDetails from './pages/Productdetails';
+import ProductList from './pages/Productlist';
 
 // import { ClassBinding } from './Components/class-bindinf';
 
@@ -59,13 +61,15 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Navbar />
+  
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/user/:id" element={<User />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/products" element={<ProductList />} />
+<Route path="/products/:id" element={<ProductDetails />} />
       </Routes>
     </BrowserRouter>
   );
