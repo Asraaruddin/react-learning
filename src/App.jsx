@@ -4,8 +4,8 @@ import Header from './Components/Header';
 import HeroSection from './Components/HeroSection';
 import Skills from './Components/Skills';
 import Projects from './Components/Projects';
-import About from './Components/About';
-import Contact from './Components/Contact';
+// import About from './Components/About';
+// import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import TodoContainer from './Components/TodoContainer';
 import { Debounce } from './Components/debounce';
@@ -45,22 +45,31 @@ import { AddTransaction } from './Components/Addtransactions';
 import { TransactionHistory } from './Components/TransactionHistory';
 import { IncomeExpensive } from './Components/Incomeexpensive';
 import { ExpenseTracker } from './Components/expensivetracker';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/home';
+import About from './pages/about';
+import User from './pages/User';
+import { Contact } from './pages/contact';
+import Navbar from './Components/Navbar';
+import { Services } from './pages/services';
+
 // import { ClassBinding } from './Components/class-bindinf';
 
 const App = () => {
 
-  
   return (
-   
-    <GlobalProvider>
-
-     
-    <ExpenseTracker/>
-     
-
-  </GlobalProvider>
-  
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/user/:id" element={<User />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
+    </BrowserRouter>
   );
-};
+  
+}
 
 export default App;
