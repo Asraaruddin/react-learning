@@ -1,79 +1,28 @@
-import React, { useState } from 'react';
- export const ThemeContext = React.createContext();
-import Header from './Components/Header';
-import HeroSection from './Components/HeroSection';
-import Skills from './Components/Skills';
-import Projects from './Components/Projects';
-// import About from './Components/About';
-// import Contact from './Components/Contact';
-import Footer from './Components/Footer';
-import TodoContainer from './Components/TodoContainer';
-import { Debounce } from './Components/debounce';
-import { Debouncedemo } from './Components/debouncedemo';
-import { FakestoreProducts } from './Components/fakestorapi';
-import { Focusinput } from './Components/inputfocus';
-import { TimerComponent } from './Components/timer';
-import { PreviousValue } from './Components/previouscount';
-import RenderCounter from './Components/example';
-import { Stopwatch } from './Components/stopwatch';
-import { Start } from './Components/startstop';
-import { ExpensiveComponent } from './Components/usememo';
-import { FilteredList } from './Components/filterdata';
-import { Component } from './Components/component';
-import { CounterComponent } from './Components/countercomponnet';
-import { ToggleComponent } from './Components/togglecomponent';
-import { ToggleButton } from './Components/togglebutton';
-import { DarkModeToggle } from './Components/darkmode';
-import { AutoCounterApp } from './Components/autocounterapp';
-import { LoginForm } from './Components/loginform';
-import { LocalStorageDemo } from './Components/localstorage';
-import { UserList } from './Components/userlist';
-import { Fakestore } from './Components/fakestore';
-// import { ProductList } from './Components/productlist';
-import { Parent } from './Components/rerender';
-import { useEffect } from 'react';
-import { Useeffect } from './Components/useEffect';
-import { Toolbar } from './Components/Toolbar';
-import { CounterReducer } from './Components/reducer';
-import { FilterList } from './Components/transition';
-import { NameInput } from './Components/useId';
-import { Head } from './Components/head';
-import { Balance } from './Components/balance';
-import { GlobalProvider } from './context/GlobalState';
-import { History } from './Components/history';
-import { AddTransaction } from './Components/Addtransactions';
-import { TransactionHistory } from './Components/TransactionHistory';
-import { IncomeExpensive } from './Components/Incomeexpensive';
-import { ExpenseTracker } from './Components/expensivetracker';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/home';
-import About from './pages/about';
-import User from './pages/User';
-import { Contact } from './pages/contact';
-import Navbar from './Components/Navbar';
-import { Services } from './pages/services';
-import ProductDetails from './pages/Productdetails';
-import ProductList from './pages/Productlist';
+import React from 'react';
+import { Provider, useDispatch, useSelector } from 'react-redux';
+import { store } from './app/store';
+import { increment,decrement } from './features/counterSlice';
 
-// import { ClassBinding } from './Components/class-bindinf';
-
-const App = () => {
+function Counter() {
+  const count = useSelector((state) => state.counter.value);
+  const dispatch = useDispatch();
 
   return (
-    <BrowserRouter>
-  
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/user/:id" element={<User />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/products" element={<ProductList />} />
-<Route path="/products/:id" element={<ProductDetails />} />
-      </Routes>
-    </BrowserRouter>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>Redux Count: {count}</h1>
+      <button onClick={() => dispatch(increment())}>Increment</button>{" "}
+      <button onClick={() => dispatch(decrement())}>Decrement</button>
+    </div>
   );
-  
 }
+
+// ✅ Only ONE App component
+const App = () => {
+  return (
+    <Provider store={store}>
+      <Counter />
+    </Provider>
+  );
+};
 
 export default App;
